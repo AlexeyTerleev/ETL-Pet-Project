@@ -1,0 +1,914 @@
+2022-12-02T07:35:50.617  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14768.99ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:36:08.339  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14743.88ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:36:32.014  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14765.86ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:36:56.447  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14755.66ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:37:13.971  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14755.59ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:37:31.478  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14758.02ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:37:49.051  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14751.88ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:38:07.126  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14759.05ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:38:24.633  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14752.36ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:38:42.136  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14764.43ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:38:59.720  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14755.74ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:39:17.108  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14767.21ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:39:34.502  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14750.08ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:39:51.891  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14752.12ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:40:09.307  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14757.55ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:40:26.712  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14769.75ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:40:44.272  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14769.21ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:41:01.737  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14752.43ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:41:19.165  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14756.56ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:41:36.765  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 14753.97ms
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/code/localstack/localstack/cli/main.py", line 10, in <module>
+    main()
+  File "/opt/code/localstack/localstack/cli/main.py", line 6, in main
+    cli()
+  File "/opt/code/localstack/localstack/cli/plugin.py", line 15, in __call__
+    self.group(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/code/localstack/localstack/utils/analytics/cli.py", line 66, in publisher_wrapper
+    return fn(*args, **kwargs)
+  File "/opt/code/localstack/localstack/cli/localstack.py", line 148, in cmd_start
+    bootstrap.start_infra_locally()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 260, in start_infra_locally
+    return infra.start_infra()
+  File "/opt/code/localstack/localstack/services/infra.py", line 435, in start_infra
+    raise e
+  File "/opt/code/localstack/localstack/services/infra.py", line 421, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 514, in do_start_infra
+    thread = start_runtime_components()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 507, in start_runtime_components
+    raise TimeoutError(
+TimeoutError: gave up waiting for edge server on 0.0.0.0:4566
+2022-12-02T07:41:42.520  INFO --- [-functhread2] l.bootstrap.install        : Unable to download Github artifact from from https://cdn.jsdelivr.net/gh/localstack/localstack-artifacts@master/local-certs/server.key to /var/lib/localstack/cache/server.test.pem: MyHTTPSConnectionPool(host='cdn.jsdelivr.net', port=443): Max retries exceeded with url: /gh/localstack/localstack-artifacts@master/local-certs/server.key (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f59e1d4a410>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')) Traceback (most recent call last):
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f59e1d4a410>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: MyHTTPSConnectionPool(host='cdn.jsdelivr.net', port=443): Max retries exceeded with url: /gh/localstack/localstack-artifacts@master/local-certs/server.key (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f59e1d4a410>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/localstack_ext/bootstrap/install.py", line 39, in C
+    try:download(url,B,timeout=timeout);return True
+  File "/opt/code/localstack/localstack/utils/http.py", line 191, in download
+    r = s.get(url, stream=True, verify=_verify, timeout=timeout)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/requests/sessions.py", line 600, in get
+    return self.request("GET", url, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/opt/code/localstack/.venv/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: MyHTTPSConnectionPool(host='cdn.jsdelivr.net', port=443): Max retries exceeded with url: /gh/localstack/localstack-artifacts@master/local-certs/server.key (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f59e1d4a410>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-12-02T07:41:42.697  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2022-12-02T07:41:42.697  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2022-12-02T07:41:42.699  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2022-12-02T07:41:42.699  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2022-12-02T07:41:42.790  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 3315.92ms
+2022-12-02T07:42:27.971  INFO --- [functhread13] l.services.motoserver      : starting moto server on http://0.0.0.0:49181
+2022-12-02T07:42:27.971  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock S3 service on http port 4566 ...
+2022-12-02T07:42:28.262  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 404 (404)
+2022-12-02T07:44:02.233  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListBuckets => 200
+2022-12-02T07:45:16.317  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CreateBucket => 200
+2022-12-02T07:45:21.779  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:21.818  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:21.907  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:21.918  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:21.930  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:21.946  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:21.957  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:21.969  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:21.988  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2022-12-02T07:45:22.085  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:22.605  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:22.618  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.161  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2022-12-02T07:45:23.173  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:23.188  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.203  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.219  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.235  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.246  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.258  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.269  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.280  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.291  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.304  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.316  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.328  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.346  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.372  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.387  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.407  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CopyObject => 200
+2022-12-02T07:45:23.421  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:23.434  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:23.447  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.461  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2022-12-02T07:45:23.473  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:23.539  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.559  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.575  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.592  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.605  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.617  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.631  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.641  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.653  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:23.664  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:23.677  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.688  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadObject => 200
+2022-12-02T07:45:23.702  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CopyObject => 200
+2022-12-02T07:45:24.022  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObject => 204
+2022-12-02T07:45:24.042  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:24.062  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:24.086  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutObject => 200
+2022-12-02T07:45:24.104  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:24.125  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:24.145  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:24.163  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:24.177  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:24.190  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:24.201  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:24.214  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutObject => 200
+2022-12-02T07:45:24.226  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2022-12-02T07:45:24.240  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.HeadObject => 404 (404)
+2022-12-02T07:45:24.250  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:45:53.561  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListBuckets => 200
+2022-12-02T07:46:11.955  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2022-12-02T07:49:36.357  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "_load_service_plugin" took 512.38ms
+2022-12-02T07:49:36.359  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "require" took 513.47ms
+2022-12-02T07:49:36.471  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS redshift.CreateCluster => 200
+2022-12-02T08:11:38.944  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS redshift.DeleteCluster => 400 (ClusterNotFound)
+2022-12-02T08:11:48.078  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS redshift.DeleteCluster => 200
+2022-12-02T08:12:58.202  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS redshift.DescribeClusters => 400 (ClusterNotFound)
+2022-12-02T08:13:08.433  INFO --- [   asgi_gw_0] localstack.request.http    : GET / => 200
