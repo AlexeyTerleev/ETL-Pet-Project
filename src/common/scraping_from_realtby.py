@@ -35,6 +35,7 @@ def get_item(item_url: str) -> dict:
 
     return item_dct
 
+
 def extract():
     url = 'https://realt.by/sale/flats/?search=eJwryS%2FPi89LzE1VNXXKycwGUi5AlgGQslV1MVC1dAaRThZg0kXVxVDVwhDMdlSLL04tKS0AKi7OLyqJT6pE0pmSWJIaX5RallmcmZ%2BHUFiUmhxfkFoUX5CYDrLH1tgAAPdPJd8%3D'
 
@@ -53,7 +54,7 @@ def extract():
         next_pages_links = soup.find('div', class_='paging-list')
         curr = int(next_pages_links.find('a', class_='active').text)
         print(f'page number {curr} is completed')
-        if curr == 10:
+        if curr == 1:
             break
 
         for el in next_pages_links.find_all('a'):
@@ -68,7 +69,7 @@ def extract():
 
 
 def upload_to_s3() -> None:
-    with open('../data/realtby.json', 'w') as outfile:
+    with open('../../data/realtby.json', 'w') as outfile:
         json.dump(extract(), outfile, ensure_ascii=False)
 
 

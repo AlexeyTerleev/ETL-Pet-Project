@@ -35,11 +35,7 @@ class Client:
         return tuple([float(x) for x in coordinates.split(" ")][::-1])
 
     @classmethod
-    def distance_to_center(cls,  address: str) -> float:
+    def distance_to_center(cls,  coordinates: typing.Tuple[float, float]) -> float:
         center = (53.902627, 27.561216)
-        coordinates = cls.coordinates(address)
         return round(haversine(coordinates, center), 3)
 
-
-if __name__ == '__main__':
-    print(Client.distance_to_center("Октябрьский район Николы Теслы ул. "))
