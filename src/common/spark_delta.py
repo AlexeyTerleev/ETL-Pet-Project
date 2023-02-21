@@ -30,16 +30,6 @@ schema = StructType([
         StructField('distance_to_center', FloatType())
     ])
 
-'''df = spark.read \
-    .format("jdbc") \
-    .option("url", "jdbc:postgresql://localhost:5432/pet_project_db") \
-    .option("dbtable", "test_table") \
-    .option("user", "postgres") \
-    .option("password", "changeme") \
-    .option("driver", "org.postgresql.Driver") \
-    .load()
-df.printSchema()'''
-
 
 def json2df():
 
@@ -81,10 +71,10 @@ def json2df():
             if not tmp_dct['year_of_construction']:
                 tmp_dct['year_of_construction'] = None
 
-            coordinates = geo_info.Client.coordinates('Минск, ' + ', '.join([tmp_dct[x] for x in
-                                                                             ('district', 'street', 'neighborhood',
-                                                                              'house_num')
-                                                                             if tmp_dct[x] is not None]))
+            coordinates = geo_info.Client.coordinates('Минск, ' + ', '.join(
+                [tmp_dct[x] for x in ('district', 'street', 'neighborhood', 'house_num') if tmp_dct[x] is not None])
+                                                      )
+
             tmp_dct['lat'] = coordinates[0]
             tmp_dct['lon'] = coordinates[1]
             tmp_dct['distance_to_center'] = geo_info.Client.distance_to_center(coordinates)
@@ -95,7 +85,7 @@ def json2df():
     return df
 
 
-def merge_to_exist_df():
+def merge_to_exist_df(df_new):
     df_main = spark.read \
         .format("jdbc") \
         .option("url", "jdbc:postgresql://localhost:5432/pet_project_db") \
@@ -105,7 +95,8 @@ def merge_to_exist_df():
         .option("driver", "org.postgresql.Driver") \
         .load()
 
-    df_new = json2df()
+    df_main.show()
+    df_new.show()
 
     df_main.createOrReplaceTempView("main")
     df_new.createOrReplaceTempView("new")
@@ -125,16 +116,19 @@ def merge_to_exist_df():
             )\
             select * from changed union select * from o union select * from n"
 
-    df = spark.sql(query).toDF()
+    df = spark.sql(query).toDF('id', 'last_price', 'ceiling_height', 'year_of_construction', 'number_of_rooms', 'floor',
+                               'living_area', 'total_area', 'kitchen_area', 'repair', 'district', 'neighborhood',
+                               'street', 'house_num', 'lat', 'lon', 'distance_to_center')
+
+    df.show()
 
 
 if __name__ == '__main__':
-    json2df().select("*").write.format("jdbc") \
+
+    merge_to_exist_df(json2df())
+
+    '''json2df().select("*").write.format("jdbc") \
         .option("url", "jdbc:postgresql://localhost:5432/pet_project_db") \
         .option("driver", "org.postgresql.Driver").option("dbtable", "realtby_data_table") \
-        .option("user", "postgres").option("password", "changeme").save()
+        .option("user", "postgres").option("password", "changeme").save()'''
 
-#выбираем id которые есть в таблице, проверяем их отпечаток, если отпечаток разный, меняем строку
-#ds,bhftv id которых нет, мерджим
-
-''''''

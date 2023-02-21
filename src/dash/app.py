@@ -21,21 +21,8 @@ df = spark.read \
 
 df.createOrReplaceTempView("table")
 
-''' <script type="text/javascript" charset="utf-8" async src="https:
-    //api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3a6741054b0715f2530d2808570c
-    715a7ea94398c0dce71d6f2b4ceeef67faf9&amp;width=537&amp;height=438&amp;lang=ru_RU&amp;scroll=true"></script> 
-    
-    {
-        'async src': 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3a6741054b0715f25\
-        30d2808570c715a7ea94398c0dce71d6f2b4ceeef67faf9&amp;width=537&amp;height=438&amp;lang=ru_RU&amp;scroll=true'
-    }
-   
-'''
-external_scripts = [
-    {"src": "https://api-maps.yandex.ru/3.0/?apikey=2ea5f3ce-e677-4bb0-8834-12ee29730cb8&lang=ru_RU"}
-]
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], external_scripts=external_scripts)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 tab1_content = dbc.Tab(
     [
@@ -58,14 +45,12 @@ tab1_content = dbc.Tab(
             [
                 dbc.Col(
                     [
-                        html.Div("Graph1"),
                         dcc.Graph(id='gr1')
                     ],
                     width={'size': 6}
                 ),
                 dbc.Col(
                     [
-                        html.Div("Graph2"),
                         dcc.Graph(id='gr2')
                     ],
                     width={'size': 6}
@@ -107,25 +92,31 @@ app.layout = html.Div([
 def filter_by_num_of_rooms(lst):
     prop = ', '.join(x for x in lst if x != '5 и более')
     if prop and '5 и более' in lst:
-        query = f"SELECT last_price, distance_to_center \
+        query = f"SELECT last_price, distance_to_center, number_of_rooms rooms\
                     FROM table \
                     WHERE number_of_rooms IN ({prop}) OR number_of_rooms >= 5"
     elif prop:
-        query = f"SELECT last_price, distance_to_center \
+        query = f"SELECT last_price, distance_to_center, number_of_rooms rooms  \
                     FROM table \
                     WHERE number_of_rooms IN ({prop})"
     elif '5 и более' in lst:
-        query = f"SELECT last_price, distance_to_center \
+        query = f"SELECT last_price, distance_to_center, number_of_rooms rooms \
                     FROM table \
                     WHERE number_of_rooms >= 5"
     else:
-        query = f"SELECT last_price, distance_to_center \
+        query = f"SELECT last_price, distance_to_center, number_of_rooms rooms \
                     FROM table \
                     WHERE number_of_rooms = -1"  # просто для пустой таблицы
 
     data = spark.sql(query).toPandas()
+    data["rooms"] = data["rooms"].astype(str)
 
-    fig = px.scatter(data, x='distance_to_center', y='last_price')
+    fig = px.scatter(data, x='distance_to_center', y='last_price', color='rooms',
+                     title='Зависимость стоимости от расположения')
+    fig.update_layout(
+        xaxis_title='Расстояние до центра (км)',
+        yaxis_title='Цена ($)'
+    )
     return fig
 
 
@@ -148,29 +139,19 @@ def filter_by_num_of_rooms(lst):
                     WHERE number_of_rooms >= 5 \
                     GROUP BY district"
     else:
-        query = f"SELECT district, count(*) num FROM realtby_data_table\
-                            WHERE number_of_rooms = -1"  # просто для пустой таблицы
+        query = f"SELECT district, count(*) num FROM table\
+                    WHERE number_of_rooms = -1 \
+                    GROUP BY district"  # просто для пустой таблицы
 
     data = spark.sql(query).toPandas()
-    fig = px.histogram(data, x="district", y="num")
+
+    fig = px.histogram(data, x="district", y="num", title='Отражение количества продоваемых квартир в разных районах')
+    fig.update_layout(
+        xaxis_title='',
+        yaxis_title='Количество продоваемых квартир'
+    )
     return fig
 
-
-app.clientside_callback(
-    """
-    ymaps3.ready.then(init);
-    function init() {
-        const map = new ymaps3.YMap(document.getElementById('testDiv'), {
-          location: {
-            center: [37.64, 55.76],
-            zoom: 7
-          }
-        });
-    }
-    """,
-    Output('testDiv', 'children'),
-    Input('button', 'n_clicks')
-)
 
 if __name__ == '__main__':
     app.run_server(debug=True)

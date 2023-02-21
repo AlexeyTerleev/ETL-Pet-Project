@@ -1,3 +1,6 @@
 venv/
 docker-compose.yml
 compose-files/compose-airflow
+./src/tmp/
+./data
+src/common/__pycache__/

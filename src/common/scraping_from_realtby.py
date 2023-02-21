@@ -5,6 +5,7 @@ import re
 import json
 from bs4 import BeautifulSoup
 
+
 def get_item(item_url: str) -> dict:
     item_dct = {}
 
@@ -13,7 +14,7 @@ def get_item(item_url: str) -> dict:
 
     id = re.findall(r'https://realt.by/sale-flats/object/(\d+)/', item_url)[0]
     try:
-        price = soup.find('span', class_='sm:ml-1.5 text-subhead sm:text-body text-basic')
+        price = soup.find('span', class_='inline-block text-subhead sm:text-body text-basic')
         price = re.findall('≈?([\d\s]+)', price.text)[0].strip()
     except:
         price = 'None'
@@ -38,7 +39,6 @@ def get_item(item_url: str) -> dict:
 
 def extract():
     url = 'https://realt.by/sale/flats/?search=eJwryS%2FPi89LzE1VNXXKycwGUi5AlgGQslV1MVC1dAaRThZg0kXVxVDVwhDMdlSLL04tKS0AKi7OLyqJT6pE0pmSWJIaX5RallmcmZ%2BHUFiUmhxfkFoUX5CYDrLH1tgAAPdPJd8%3D'
-
     item_list = []
 
     while url:
@@ -48,13 +48,15 @@ def extract():
         res = soup.find_all('a', class_='teaser-title')
 
         for el in res:
-          if el.get('title') is not None and re.fullmatch(r"https://realt.by/sale-flats/object/\d+/", el.get('href')):
-            item_list.append(get_item(el.get('href')))
+            if el.get('title') is not None and re.fullmatch(r"https://realt.by/sale-flats/object/\d+/", el.get('href')):
+                item_list.append(get_item(el.get('href')))
 
         next_pages_links = soup.find('div', class_='paging-list')
         curr = int(next_pages_links.find('a', class_='active').text)
         print(f'page number {curr} is completed')
-        if curr == 1:
+
+        # для меньшего ожидания во время тестов
+        if curr == 5:
             break
 
         for el in next_pages_links.find_all('a'):
@@ -68,12 +70,5 @@ def extract():
     return item_list
 
 
-def upload_to_s3() -> None:
-    with open('../../data/realtby.json', 'w') as outfile:
-        json.dump(extract(), outfile, ensure_ascii=False)
-
-
 if __name__ == '__main__':
-
-    upload_to_s3()
-
+    extract()
