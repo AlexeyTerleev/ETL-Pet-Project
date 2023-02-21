@@ -25,46 +25,57 @@ df.createOrReplaceTempView("table")
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 tab1_content = dbc.Tab(
-    [
-        dbc.Row(
-            [
-                dbc.Col(
-                    [
-                        html.Div("Количество комнат: "),
-                        dcc.Checklist(
-                            id='menu',
-                            options=['1', '2', '3', '4', '5 и более'],
-                            value=['1', '2', '3', '4', '5 и более'],
-                        )
-                    ]
-                )
-            ],
-            style={'margin-bottom': 40}
-        ),
-        dbc.Row(
-            [
-                dbc.Col(
-                    [
-                        dcc.Graph(id='gr1')
-                    ],
-                    width={'size': 6}
-                ),
-                dbc.Col(
-                    [
-                        dcc.Graph(id='gr2')
-                    ],
-                    width={'size': 6}
-                )
-            ],
-            style={'margin-bottom': 40}
-        )
-    ]
+    dbc.Row(
+        [
+            dbc.Col(
+                [
+                    dbc.Row(
+                        [
+                            dcc.Graph(id='gr1')
+                        ],
+                        style={'border-bottom': 'solid', 'border-width': '1px', 'border-color': '#5d60fc'}
+                    ),
+                    dbc.Row(
+                        [
+                            dcc.Graph(id='gr2')
+                        ]
+                    )
+                ],
+                width={'size': 7}
+            ),
+            dbc.Col(
+                width={'size': 1}
+            ),
+            dbc.Col(
+                [
+
+                    html.Div(
+                        [
+                            html.Div("Количество комнат: "),
+                            dcc.Checklist(
+                                id='menu',
+                                options=['1', '2', '3', '4', '5 и более'],
+                                value=['1', '2', '3', '4', '5 и более'],
+                                labelStyle={'display': 'block'},
+                                style={"overflow": "auto"},
+                            )
+                        ],
+                        style={'padding': 20, 'border': 'solid', 'border-width': '1px', 'border-color': '#5d60fc'}
+                    ),
+                ],
+                style={'align-self': 'center'},
+                width={'size': 3}
+            ),
+            dbc.Col(
+                width={'size': 1}
+            ),
+        ],
+        style={'margin-bottom': 40}
+    )
 )
 
 tab2_content = (
-    html.Script("https://api-maps.yandex.ru/3.0/?apikey=2ea5f3ce-e677-4bb0-8834-12ee29730cb8&lang=ru_RU"),
-    dbc.Button(id="button"),
-    html.Div(id="testDiv")
+
 )
 
 app.layout = html.Div([
