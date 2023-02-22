@@ -58,6 +58,7 @@ def extract():
         # для меньшего ожидания во время тестов
         if curr == 5:
             break
+        #-------------------------------------
 
         for el in next_pages_links.find_all('a'):
             try:
@@ -69,6 +70,7 @@ def extract():
 
     return item_list
 
-
-if __name__ == '__main__':
-    extract()
+def download_json():
+    lst = scraping_from_realtby.extract()
+    with open('../../data/realtby.json', 'w', encoding='utf-8') as file:
+        json.dump(lst, file, ensure_ascii=False)

@@ -1,10 +1,16 @@
+import sys
+
+sys.path.append('/opt/airflow/src')
+
 import re
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, FloatType, StringType
 
-import geo_info
+import common.geo_info
 
 import json
+
+import common.utilities
 
 spark = SparkSession.builder.config("spark.jars", "/usr/local/postgresql-42.5.1.jar") \
     .master("local").appName("PySpark_Postgres_test").getOrCreate()
@@ -41,10 +47,6 @@ def json2df():
         # for usage
         for line in list(data):
 
-            # --- for test ---
-            # for i in range(20):
-            #    line = list(data)[i]
-            # ----------------
             if line['last_price'] == 'None':
                 continue
 
@@ -72,8 +74,7 @@ def json2df():
                 tmp_dct['year_of_construction'] = None
 
             coordinates = geo_info.Client.coordinates('Минск, ' + ', '.join(
-                [tmp_dct[x] for x in ('district', 'street', 'neighborhood', 'house_num') if tmp_dct[x] is not None])
-                                                      )
+                [tmp_dct[x] for x in ('district', 'street', 'neighborhood', 'house_num') if tmp_dct[x] is not None]))
 
             tmp_dct['lat'] = coordinates[0]
             tmp_dct['lon'] = coordinates[1]
@@ -83,7 +84,6 @@ def json2df():
             df = df.union(tmp_df)
 
     return df
-
 
 def merge_to_exist_df(df_new):
     df_main = spark.read \
@@ -120,15 +120,24 @@ def merge_to_exist_df(df_new):
                                'living_area', 'total_area', 'kitchen_area', 'repair', 'district', 'neighborhood',
                                'street', 'house_num', 'lat', 'lon', 'distance_to_center')
 
-    df.show()
+    return df
 
+def upload_to_db():
 
-if __name__ == '__main__':
+    utilities.delete_table()
 
-    merge_to_exist_df(json2df())
-
-    '''json2df().select("*").write.format("jdbc") \
+    json2df().select("*").write.format("jdbc") \
         .option("url", "jdbc:postgresql://localhost:5432/pet_project_db") \
         .option("driver", "org.postgresql.Driver").option("dbtable", "realtby_data_table") \
-        .option("user", "postgres").option("password", "changeme").save()'''
+        .option("user", "postgres").option("password", "changeme").save()
+
+def update_db():
+    df = merge_to_exist_df(json2df())
+
+    utilities.delete_table()
+
+    df.select("*").write.format("jdbc") \
+        .option("url", "jdbc:postgresql://localhost:5432/pet_project_db") \
+        .option("driver", "org.postgresql.Driver").option("dbtable", "realtby_data_table") \
+        .option("user", "postgres").option("password", "changeme").save()
 
